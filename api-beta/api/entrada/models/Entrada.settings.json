@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "entradas",
+  "info": {
+    "name": "entrada",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "cuerpo": {
+      "type": "text"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "mostrar": {
+      "type": "boolean"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "orden": {
+      "type": "integer"
+    },
+    "cuerpoen": {
+      "type": "text"
+    },
+    "tituloen": {
+      "type": "string"
+    },
+    "categorias": {
+      "type": "json"
+    }
+  }
+}

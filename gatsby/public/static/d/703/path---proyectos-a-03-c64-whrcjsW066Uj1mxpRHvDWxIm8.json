@@ -1,0 +1,1 @@
+{"errors":[{"message":"Cannot query field \"allStrapiProyecto\" on type \"Query\".","locations":[{"line":2,"column":3}]}],"pageContext":{"isCreatedByStatefulCreatePages":true,"slug":"/proyectos/","langKey":"es"}}

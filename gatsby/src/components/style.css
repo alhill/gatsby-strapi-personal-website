@@ -1,0 +1,318 @@
+body{
+    font-family: "Fira Code", monospace;
+    background: #1010ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0505dd, #1010ff, #0505dd); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0505dd, #1010ff, #0505dd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fafafa;
+    cursor: default !important;
+}
+
+strong{
+    font-weight: bold;
+}
+
+#hero{
+    height: 50vh;
+    background-image: url("../images/noise.webp");
+    background-size: cover;
+    animation-name: blurry;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    max-width: 100vw;
+    overflow: hidden;
+}
+#hero .inner{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+}
+#hero .inner .left{
+    display: flex;
+    padding-left: 3em;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 6em;
+    padding-bottom: 10px;
+}
+h2{
+    font-size: 2em;
+    line-height: 1.5em;
+}
+p{
+    font-size: 1.4em;
+    line-height: 1.8em;
+    margin-bottom: 1em;
+}
+a, a:hover{
+    color: cyan;
+    cursor: pointer;
+    text-decoration: none;
+}
+footer a{
+    color: cyan;
+    cursor: pointer;
+}
+a.projectBox{
+    color: #1010ff;
+}
+.container{
+    max-width: 1200px;
+    width: calc(100% - 2em);
+    margin: 50px auto;
+    padding: 1em;
+    transition: all 300ms
+}
+.container.boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container.boxes.peque{
+    margin: 0 auto
+}
+.box{
+    border: 2px solid #fafafa;
+    border-radius: 2px;
+    width: calc(25% - 60px);
+    padding: 20px 10px;
+    filter: blur(0.6px);
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    transition: all 300ms;
+}
+.peque .box{
+    padding: 0 10px;
+}
+.box:hover{
+    background-color: #fafafa;
+    color: #1010ff;
+    box-shadow: 0 10px 0 1px black;
+}
+.box h2{
+    color: white;
+}
+.box:hover h2{
+    color: #1010ff;
+}
+.box:hover h2:after, .projectBox:hover p:after{
+    content: "_";
+    margin-left: 2px;
+    animation-name: cursor_blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.blink{
+    animation-name: cursor_blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.copycat, .copycat2{
+    display: none;
+}
+
+.terminal{
+    position: relative;
+}
+
+.terminal input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: default;
+}
+
+.lime{ color: lime !important }
+.fuchsia{ color: fuchsia !important }
+
+@keyframes cursor_blink {
+    9%  {color: #1010ff}
+    10%  {color: #1010ff}
+    11%  {color: transparent}
+    59%   {color: transparent}
+    60%   {color: transparent}
+    61%   {color: #1010ff}
+}
+
+.banderita{
+    width: 64px;
+    height: 64px;
+    margin: 15px;
+    transform: scale(0.6);
+    transition: all 300ms
+}
+.banderita:hover{
+    filter: brightness(0.95);
+    transform: scale(0.65);
+}
+.banderita.es{
+    background: url("../images/flags16_ce.gif") -64px -128px ;
+}
+.banderita.en{
+    background: url("../images/flags16_ce.gif") -192px -64px;
+}
+
+@keyframes blurry {
+    9%    { filter: blur(0.6px); }
+    10%   { 
+        filter: blur(1px); 
+        margin-left: -2px;
+    }
+    11%   { filter: blur(0.6px); }
+    49%   { filter: blur(0.6px); }
+    50%   { 
+        filter: blur(2px); 
+        margin-left: -2px;
+    }
+    51%   { filter: blur(0.6px); }
+    69%   { filter: blur(0.6px); }
+    70%   { 
+        filter: blur(1.5px);
+    }
+    71%   { filter: blur(0.6px); }
+}
+
+.btnidioma{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    margin: 10px 10px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms;
+    font-weight: bold;
+}
+.btnidioma:hover{
+    filter: brightness(0.9)
+}
+
+.projectWrapper{
+    margin-top: 1em;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.projectBox{
+    display: flex;
+    width: calc(50% - 2em);
+    height: 200px;
+    margin: 0 1em 2em 1em;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 300ms;
+}
+.projectBox:hover{
+    box-shadow: 0 14px 0 1px black;
+}
+.projectBox.filtrada {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.projectBox img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.projectTitle{
+    width: 100%;
+    padding: 1em;
+}
+
+.filtroWrapper{
+    display: inline-flex;
+    margin: 2em 0 1em 1em;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.filtroBtn{
+    padding: 3px 10px;
+    background-color: white;
+    color: black;
+    transition: all 300ms;
+}
+.filtroBtn.selected{
+    background-color: black;
+    color: white;
+}
+
+.cuerpo img{
+    width: 90%;
+    max-height: 400px;
+    object-fit: contain;
+    padding: 2em 0;
+}
+
+@media (max-width: 700px) {
+    #hero .inner{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #hero .inner .left{
+        padding-left: 1em;
+    }
+    #hero{
+        height: 30vh;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    h2{
+        font-size: 1.3em;
+        line-height: 1.1em;
+    }
+    p{
+        font-size: 1em;
+        line-height: 1.2em;
+        margin-bottom: 1em;
+    }
+    .container{
+        margin: 10px auto;
+    }
+    .box{
+        width: calc(50% - 20px);
+        margin-bottom: 10px;
+        padding: 10px 5px;
+        white-space: nowrap;
+    }
+    .peque .box{
+        padding: 5px;
+    }
+    .projectBox{
+        width: calc(100% - 2em);
+        height: 150px;
+    }
+    .btnidioma{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0;
+    }
+    main{
+        padding: 0 !important;
+    }
+    main h1{
+        margin-left: 10px;
+    }
+
+}
+

@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "proyectos",
+  "info": {
+    "name": "proyecto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "cuerpo": {
+      "type": "text"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "mostrar": {
+      "type": "boolean"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "orden": {
+      "type": "integer"
+    },
+    "cuerpoen": {
+      "type": "text"
+    },
+    "tituloen": {
+      "type": "string"
+    },
+    "categorias": {
+      "type": "json"
+    }
+  }
+}
