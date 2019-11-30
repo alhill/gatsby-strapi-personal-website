@@ -29,7 +29,7 @@ export const query = graphql`
             titulo
             cuerpo
             media{
-                url
+                publicURL
             }
         }
     }

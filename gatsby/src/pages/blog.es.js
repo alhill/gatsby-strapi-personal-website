@@ -31,7 +31,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          created_at
+          createdAt
           titulo
           cuerpo
           thumbnail{

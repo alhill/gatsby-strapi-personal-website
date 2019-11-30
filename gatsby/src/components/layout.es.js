@@ -94,7 +94,7 @@ class Layout extends Component {
                       maxWidth: 980,
                       margin: "0 10px 20px 10px",
                     }}>
-                        © 2019 - Hecho con <span role="img" aria-label="love">❤️</span>, <span role="img" aria-label="beer">🍺</span> & <span role="img" aria-label="poo">💩</span> por <span style={{ whiteSpace: "nowrap"}}>Al Hill</span> con la inestimable ayuda de <Link to="/en/agradecimientos" state={{ from: location.pathname }}>toda esta gente</Link>
+                        © 2019 - Hecho con <span role="img" aria-label="love">❤️</span>, <span role="img" aria-label="beer">🍺</span> & <span role="img" aria-label="poo">💩</span> por <span style={{ whiteSpace: "nowrap"}}>Al Hill</span> con la inestimable ayuda de <Link to="/agradecimientos" state={{ from: location.pathname }}>{location.pathname === "/agradecimientos" ? "la gente de ahí arriba ↑ ↑ ↑" : "toda esta gente"}</Link>
                     </p>
                   </footer>
               </div>

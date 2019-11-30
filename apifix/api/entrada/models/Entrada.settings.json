@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "entrada",
+  "info": {
+    "name": "entrada",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "tituloen": {
+      "type": "string"
+    },
+    "cuerpo": {
+      "type": "text"
+    },
+    "cuerpoen": {
+      "type": "text"
+    },
+    "media": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

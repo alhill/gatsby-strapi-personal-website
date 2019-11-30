@@ -22,22 +22,32 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         entradaES: allStrapiEntrada {
             edges {
                 node {
-                    id
-                    created_at
-                    titulo
-                    cuerpo
-                    media{ url }
+                  id
+                  createdAt
+                  titulo
+                  cuerpo
+                  media{ 
+                    publicURL
+                  }
+                  thumbnail{ 
+                    publicURL
+                  }
                 }
             }
         }        
         entradaEN: allStrapiEntrada {
             edges {
                 node {
-                    id
-                    created_at
-                    tituloen
-                    cuerpoen
-                    media{ url }
+                  id
+                  createdAt
+                  tituloen
+                  cuerpoen
+                  media{ 
+                    publicURL
+                  }
+                  thumbnail{ 
+                    publicURL
+                  }
                 }
             }
         }       
@@ -45,14 +55,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             edges {
                 node {
                   id
-                  created_at
+                  createdAt
                   titulo
                   cuerpo
                   categorias
-                  thumbnail{
+                  media{ 
                     publicURL
                   }
-                  media{ url }
+                  thumbnail{ 
+                    publicURL
+                  }
                 }
             }
         }
@@ -60,14 +72,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             edges {
                 node {
                   id
-                  created_at
+                  createdAt
                   tituloen
                   cuerpoen
                   categorias
-                  thumbnail{
+                  media{ 
                     publicURL
                   }
-                  media{ url }
+                  thumbnail{ 
+                    publicURL
+                  }
               }
           }
       }

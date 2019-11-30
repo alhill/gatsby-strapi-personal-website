@@ -20,6 +20,7 @@ class Layout extends Component{
       this.setState({ homeButtons: false })
     }
   }
+
   render(){
     const { children, location } = this.props
     return (
@@ -67,7 +68,7 @@ class Layout extends Component{
                     </Link>
                     <Link to="/en/blog" state={{ from: location.pathname }} className="box">
                       <h2>Blog</h2>
-                      </Link>
+                    </Link>
                     <Link to="/en/cv" state={{ from: location.pathname }} className="box">
                       <h2>CV</h2>
                     </Link>
@@ -95,7 +96,7 @@ class Layout extends Component{
                     maxWidth: 960,
                     margin: "0 10px 20px 10px",
                   }}>
-                    © 2019 - Made with <span role="img" aria-label="love">❤️</span>, <span role="img" aria-label="beer">🍺</span> & <span role="img" aria-label="poo">💩</span> by <span style={{ whiteSpace: "nowrap"}}>Al Hill</span> with the invaluable help of <Link to="/agradecimientos" state={{ from: location.pathname }}>all of this great people</Link>
+                    © 2019 - Made with <span role="img" aria-label="love">❤️</span>, <span role="img" aria-label="beer">🍺</span> & <span role="img" aria-label="poo">💩</span> by <span style={{ whiteSpace: "nowrap"}}>Al Hill</span> with the invaluable help of <Link to="/en/agradecimientos" state={{ from: location.pathname }}>all of {location.pathname === "/en/agradecimientos" ? "the people above ↑ ↑ ↑" : "this great people"}</Link>
                   </p>
                 </footer>
             </div>

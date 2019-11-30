@@ -43,12 +43,20 @@ h2{
     font-size: 2em;
     line-height: 1.5em;
 }
-p{
+h3{
+    font-size: 1.6em;
+    line-height: 1.3em;
+}
+p, li, label{
     font-size: 1.4em;
     line-height: 1.8em;
     margin-bottom: 1em;
 }
-a, a:hover{
+li:before{
+    content: "-> ";
+    padding-right: "3px";
+}
+a, a:hover, #killcss{
     color: cyan;
     cursor: pointer;
     text-decoration: none;
@@ -67,6 +75,9 @@ a.projectBox{
     padding: 1em;
     transition: all 300ms
 }
+.container.lessmargin{
+    margin: 20px auto;
+}
 .container.boxes{
     display: flex;
     flex-direction: row;
@@ -79,7 +90,7 @@ a.projectBox{
 .box{
     border: 2px solid #fafafa;
     border-radius: 2px;
-    width: calc(25% - 60px);
+    width: calc(25% - 35px);
     padding: 20px 10px;
     filter: blur(0.6px);
     display: flex;
@@ -87,7 +98,7 @@ a.projectBox{
     color: white;
     transition: all 300ms;
 }
-.peque .box{
+.peque .box, .peque.box{
     padding: 0 10px;
 }
 .box:hover{
@@ -101,7 +112,7 @@ a.projectBox{
 .box:hover h2{
     color: #1010ff;
 }
-.box:hover h2:after, .projectBox:hover p:after{
+.box:hover h3:after, .box:hover h2:after, .projectBox:hover p:after{
     content: "_";
     margin-left: 2px;
     animation-name: cursor_blink;
@@ -203,7 +214,7 @@ a.projectBox{
 }
 
 .projectWrapper{
-    margin-top: 1em;
+    margin-top: 2em;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -262,7 +273,23 @@ a.projectBox{
     padding: 2em 0;
 }
 
-@media (max-width: 700px) {
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+.form-group label{
+    margin-bottom: 0.5em;
+}
+.form-group input, .form-group textarea{
+    font-family: "Fira Code", monospace;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 3px;
+    border: 0;
+}
+
+@media (max-width: 992px) {
     #hero .inner{
         padding-left: 1em;
         padding-right: 1em;
@@ -280,13 +307,20 @@ a.projectBox{
         font-size: 1.3em;
         line-height: 1.1em;
     }
-    p{
+    h3{
+        font-size: 1.1em;
+        line-height: 1em;
+    }
+    p, li, label{
         font-size: 1em;
         line-height: 1.2em;
         margin-bottom: 1em;
     }
     .container{
         margin: 10px auto;
+    }
+    .container.lessmargin{
+        margin-top: 0;
     }
     .box{
         width: calc(50% - 20px);

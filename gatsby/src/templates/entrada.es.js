@@ -28,7 +28,9 @@ export const query = graphql`
             id
             titulo
             cuerpo
-            media{ url }
+            media{
+                publicURL
+            }
         }
     }
 ` 

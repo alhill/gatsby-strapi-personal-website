@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "proyecto",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "tituloen": {
+      "type": "string"
+    },
+    "cuerpo": {
+      "type": "text"
+    },
+    "cuerpoen": {
+      "type": "text"
+    },
+    "categorias": {
+      "type": "json"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "media": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
