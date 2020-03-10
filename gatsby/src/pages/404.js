@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 const NotFoundPage = () => (
   <Layout><>
     <SEO title="Al Hill - 404" />
-    <h1>404</h1>
+    <marquee><h1>404</h1></marquee>
   </></Layout>
 )
 

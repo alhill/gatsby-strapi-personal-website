@@ -24,7 +24,7 @@ module.exports = {
           'entrada',
           'proyecto'
         ],
-        queryLimit: 1000,
+        queryLimit: 10000,
       },
     },
     'gatsby-transformer-sharp',

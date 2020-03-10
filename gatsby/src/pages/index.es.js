@@ -14,6 +14,9 @@ class IndexPage extends Component {
   }
 
   scrollito = React.createRef()
+  componentDidMount(){
+      window.scrollTo(0, 0)
+  }
 
   buscaEnter = async e => {
     const h = this.state.hidden

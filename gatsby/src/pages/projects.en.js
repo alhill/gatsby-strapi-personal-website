@@ -29,7 +29,7 @@ class ProyectosPage extends Component{
           {
             this.props.data.allStrapiProyecto.edges.map(({ node }) => {
               return (
-                <Link key={node.id} to={"/en/project/" + node.id } className={`projectBox ${( node.categorias.includes(this.state.filtro) || this.state.filtro === undefined ) ? "" : "filtrada"}`}>
+                <Link key={node.id} to={"/en/project/" + node.id } className={`projectBox ${( node.categorias.split(",").includes(this.state.filtro) || this.state.filtro === undefined ) ? "" : "filtrada"}`}>
                   <img src={node.thumbnail.publicURL} />
                   <div className="projectTitle">
                     <p>{node.tituloen}</p>

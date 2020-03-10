@@ -1,1 +1,0 @@
-{"errors":[{"message":"Variable \"$id\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"isCreatedByStatefulCreatePages":false,"availableLngs":["en","es"],"fallbackLng":"en","lng":"en","routed":true,"originalPath":"/proyecto/Proyecto_5cdc835fe25f2411f0938af5","i18nextOptions":{"debug":true}}}

@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { StaticQuery, graphql, Link } from "gatsby"
 import Header from "./header"
+import _ from "lodash"
 import "./reset.css"
 import "./fira_code.css"
 import "./style.css"
 
 class Layout extends Component {
   state = {
-    homeButtons: !["", "/"].includes(this.props.location.pathname) &&
-                  ["", "/"].includes(this.props.location.state.from)
+    homeButtons: !["", "/"].includes(_.get(this, "props.location.pathname", "")) &&
+                  ["", "/"].includes(_.get(this, "props.location.state.from"))
   }
 
   componentDidMount(){
@@ -39,7 +40,7 @@ class Layout extends Component {
           }
         `}
         render={data => {
-          const url = location.pathname;
+          const url = location ? location.pathname : "";
           const { langs, defaultLangKey } = data.site.siteMetadata.languages;
           const langKey = getCurrentLangKey(langs, defaultLangKey, url);
           const homeLink = langKey === "en" ? "/en/" : "/"
@@ -64,16 +65,16 @@ class Layout extends Component {
                   <div style={{ width: "100vw", overflowX: "hidden" }}>
                     <Header siteTitle={data.site.siteMetadata.title} langs={langsMenu} location={location} root={ homeLink } />
                     <div className={`container boxes ${ this.state.homeButtons ? "" : "peque" }`}>
-                      <Link to="/proyectos" state={{ from: location.pathname }} className="box">
+                      <Link to="/proyectos" state={{ from: location && location.pathname }} className="box">
                         <h2>Proyectos</h2>
                       </Link>
-                      <Link to="/blog" state={{ from: location.pathname }} className="box">
+                      <Link to="/blog" state={{ from: location && location.pathname }} className="box">
                         <h2>Blog</h2>
                         </Link>
-                      <Link to="/cv" state={{ from: location.pathname }} className="box">
+                      <Link to="/cv" state={{ from: location && location.pathname }} className="box">
                         <h2>CV</h2>
                       </Link>
-                      <Link to="/contacto" state={{ from: location.pathname }} className="box">
+                      <Link to="/contacto" state={{ from: location && location.pathname }} className="box">
                         <h2>Contacto</h2>
                       </Link>
                     </div>
@@ -94,7 +95,7 @@ class Layout extends Component {
                       maxWidth: 980,
                       margin: "0 10px 20px 10px",
                     }}>
-                        © 2019 - Hecho con <span role="img" aria-label="love">❤️</span>, <span role="img" aria-label="beer">🍺</span> & <span role="img" aria-label="poo">💩</span> por <span style={{ whiteSpace: "nowrap"}}>Al Hill</span> con la inestimable ayuda de <Link to="/agradecimientos" state={{ from: location.pathname }}>{location.pathname === "/agradecimientos" ? "la gente de ahí arriba ↑ ↑ ↑" : "toda esta gente"}</Link>
+                        © 2019 - Hecho con <span role="img" aria-label="love">❤️</span>, <span role="img" aria-label="beer">🍺</span> & <span role="img" aria-label="poo">💩</span> por <span style={{ whiteSpace: "nowrap"}}>Al Hill</span> con la inestimable ayuda de <Link to="/agradecimientos" state={{ from: location && location.pathname }}>{(location && location.pathname) === "/agradecimientos" ? "la gente de ahí arriba ↑ ↑ ↑" : "toda esta gente"}</Link>
                     </p>
                   </footer>
               </div>

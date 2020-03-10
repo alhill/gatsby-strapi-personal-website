@@ -1,14 +1,14 @@
 var plugins = [{
-      plugin: require('D:/CODE/gatsby-strapi-personal-website/gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/home/blacknosaur/perso/gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('D:/CODE/gatsby-strapi-personal-website/gatsby/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/home/blacknosaur/perso/gatsby/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png"},
     },{
-      plugin: require('D:/CODE/gatsby-strapi-personal-website/gatsby/node_modules/gatsby-plugin-transition-link/gatsby-ssr'),
+      plugin: require('/home/blacknosaur/perso/gatsby/node_modules/gatsby-plugin-transition-link/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('D:/CODE/gatsby-strapi-personal-website/gatsby/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      plugin: require('/home/blacknosaur/perso/gatsby/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

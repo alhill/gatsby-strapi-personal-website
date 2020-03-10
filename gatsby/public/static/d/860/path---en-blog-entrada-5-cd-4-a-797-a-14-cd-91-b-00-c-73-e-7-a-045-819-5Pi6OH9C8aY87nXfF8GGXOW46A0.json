@@ -1,1 +1,0 @@
-{"errors":[{"message":"Variable \"$id\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"isCreatedByStatefulCreatePages":false,"availableLngs":["en","es"],"fallbackLng":"en","lng":"en","routed":true,"originalPath":"/blog/Entrada_5cd4a797a14cd91b00c73e7a","i18nextOptions":{"debug":true}}}

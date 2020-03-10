@@ -8,7 +8,7 @@ const Header = ({ langs, root, location }) => {
     <header id="hero">
       <div className="inner">
           <div className="left">
-            <Link to={ root } state={{ from: location.pathname }} style={{ color: "white" }}><h1>Al Hill</h1></Link>
+            <Link to={ root } state={{ from: location && location.pathname }} style={{ color: "white" }}><h1>Al Hill</h1></Link>
             <h2><span className="lime">==></span> { l === "en" ? "Web developer" : "Desarrollador web" }</h2>
             <h2><span className="lime">==></span> { l === "en" ? "Sound technician" : "Técnico de sonido" }</h2>
           </div>
