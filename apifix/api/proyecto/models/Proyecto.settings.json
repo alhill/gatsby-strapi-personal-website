@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "proyecto",
   "info": {
     "name": "proyecto",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "titulo": {
@@ -21,9 +24,6 @@
     "cuerpoen": {
       "type": "text"
     },
-    "categorias": {
-      "type": "json"
-    },
     "thumbnail": {
       "model": "file",
       "via": "related",
@@ -33,6 +33,9 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "categorias": {
+      "type": "string"
     }
   }
 }
